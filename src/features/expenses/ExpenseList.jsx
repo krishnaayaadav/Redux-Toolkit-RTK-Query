@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { useGetAllExpenseQuery, useGetExpenseDetailsQuery } from '../expense';
+import { useGetAllExpenseQuery, useGetExpenseDetailsQuery } from '../../services/expense';
 import ExpenseItem from './ExpenseItem';
 
 const ExpenseList = ()=> {

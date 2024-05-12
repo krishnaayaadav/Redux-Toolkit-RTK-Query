@@ -1,6 +1,6 @@
 
 
-import { useDeleteExpenseMutation } from '../expense';
+import { useDeleteExpenseMutation } from '../../services/expense';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const DeleteExepense = ()=> {

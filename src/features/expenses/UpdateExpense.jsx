@@ -1,5 +1,5 @@
 
-import { useUpdateExpenseMutation } from '../expense';
+import { useUpdateExpenseMutation } from '../../services/expense';
 import { useParams } from 'react-router-dom';
 
 const UpdateExpense = ()=> {

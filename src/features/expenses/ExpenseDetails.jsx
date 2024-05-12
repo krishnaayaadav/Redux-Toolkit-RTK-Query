@@ -1,6 +1,6 @@
 
 import { useParams, Link } from "react-router-dom";
-import {  useGetExpenseDetailsQuery } from '../expense';
+import {  useGetExpenseDetailsQuery } from '../../services/expense';
 
 
 

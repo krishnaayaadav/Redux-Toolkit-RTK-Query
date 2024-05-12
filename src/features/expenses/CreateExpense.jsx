@@ -1,5 +1,5 @@
 
-import { useAddNewExpenseMutation } from '../expense';
+import { useAddNewExpenseMutation } from '../../services/expense';
 
 const CreateExpense = ()=>{
     const [createExpense, response]  = useAddNewExpenseMutation();

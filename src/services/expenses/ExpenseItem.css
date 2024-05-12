@@ -1,0 +1,9 @@
+.expense-item{
+
+    padding: 20px;
+    margin-top: 13px;
+    background-color: rgb(37, 35, 35);
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-right: 10px;
+}

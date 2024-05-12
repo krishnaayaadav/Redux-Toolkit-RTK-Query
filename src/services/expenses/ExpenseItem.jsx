@@ -5,7 +5,6 @@ import './ExpenseItem.css';
 
 const ExpenseItem = (props)=> {
     const { expense } = props;
-    let detail_page_link = `/expense/details/id/${expense.pk}`;
 
     return (
         <div className="expense-item">
@@ -13,8 +12,10 @@ const ExpenseItem = (props)=> {
             <h3>Title: {expense.exp_title} </h3>
             <p>Description: {expense.exp_description} </p>
 
-            <Link to={detail_page_link} >Read More</Link>
-            <Link to={`/expense/delete/id/${expense.pk}`} >Delete Expense</Link>
+            <Link to={`/expense/details/id/${expense.pk}`} >Read More</Link> <br />
+            <Link to={`/expense/delete/id/${expense.pk}`} >Delete Expense</Link> <br />
+            <Link to={`/expense/update/id/${expense.pk}`} >Update Expense</Link>
+
 
 
         </div>

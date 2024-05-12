@@ -46,6 +46,19 @@ export const expenseApi = createApi({
                 }
                 
             })
+        }),
+        
+        // update expense item
+        updateExpense: builder.mutation({
+            query: (expensePayload)=>({
+                url: `/expense/api/expense/update/${expensePayload.pk}/`,
+                method: 'PATCH',
+                body: expensePayload,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+
+            })
         })
 
       
@@ -54,4 +67,4 @@ export const expenseApi = createApi({
     })
 })
 
-export const { useGetAllExpenseQuery, useGetExpenseDetailsQuery, useDeleteExpenseMutation, useAddNewExpenseMutation  } = expenseApi;
+export const { useGetAllExpenseQuery, useGetExpenseDetailsQuery, useDeleteExpenseMutation, useAddNewExpenseMutation, useUpdateExpenseMutation  } = expenseApi;

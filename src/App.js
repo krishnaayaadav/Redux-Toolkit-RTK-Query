@@ -6,6 +6,7 @@ import ExpenseList from './services/expenses/ExpenseList';
 import ExpenseDetails from './services/expenses/ExpenseDetails';
 import DeleteExepense from './services/expenses/deleteExepense';
 import CreateExpense from './services/expenses/CreateExpense';
+import UpdateExpense from './services/expenses/UpdateExpense';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
 
           <Route path='/expense/details/id/:id' element={ <ExpenseDetails />} />
           <Route path='/expense/delete/id/:id' element={ <DeleteExepense />} />
+          <Route path='/expense/update/id/:id' element={ <UpdateExpense />} />
+
 
 
         </Routes>

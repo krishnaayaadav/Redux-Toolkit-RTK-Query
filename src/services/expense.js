@@ -19,14 +19,39 @@ export const expenseApi = createApi({
 
         // get single expense details
         getExpenseDetails: builder.query({
-            query: (expId) => ({
-                url: `/expense/api/expense/details/${expId}/`,
-                method: 'GET',
+            query: (expId) => {
+                console.log(expId)// this is way to check expId
+                return{  url: `/expense/api/expense/details/${expId}/`,
+                         method: 'GET'
+                }
+            }
+        }),
 
+        deleteExpense: builder.mutation({
+            query: (expId) => ({
+                url: `/expense/api/expense/delete/${expId}/`,
+                method: 'DELETE'
+            })
+        }),
+
+        // add-new expense
+        addNewExpense: builder.mutation({
+            query: (expensePayload) => ({
+                url: '/expense/api/expense/add/',
+                method: 'POST',
+                body: expensePayload,
+                headers: {
+                    'Content-Type': 'application/json'
+                    
+                }
+                
             })
         })
+
+      
+
         
     })
 })
 
-export const { useGetAllExpenseQuery, useGetExpenseDetailsQuery } = expenseApi;
+export const { useGetAllExpenseQuery, useGetExpenseDetailsQuery, useDeleteExpenseMutation, useAddNewExpenseMutation  } = expenseApi;

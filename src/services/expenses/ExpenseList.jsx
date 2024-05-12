@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 import { useGetAllExpenseQuery, useGetExpenseDetailsQuery } from '../expense';
 import ExpenseItem from './ExpenseItem';
@@ -23,22 +24,29 @@ const ExpenseList = ()=> {
         <div className="expense-list">
             {
                 isFetching ? 
-                    <>Please Wait Data Is Still Loading</>
+                    <>
+                        Please Wait Data Is Still Loading
+
+                    </>
+                    
                 :
                     <>
-                        Congrats! data loaded successfully
                         {
                             data ?
-                                <>
+                                <div style={{'width': '70%', 'marginLeft': '25%'}}>
+                        <br /> <Link to={'/expense/create/new/expense'}> Create New Expense</Link>
+
+
                                  {
                                     data.results.map( expense => (
                                         <ExpenseItem expense ={expense} key={expense.pk} />
                                     ) )
                                  }
-                                </>
+                                </div>
                             : 
                                 <> </>
                         }
+
                     
                     </>
                     
